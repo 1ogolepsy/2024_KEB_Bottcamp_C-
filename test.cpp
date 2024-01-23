@@ -3,17 +3,32 @@ using namespace std;
 
 int main()
 {
-    int num1;
-    double sum;
+    const unsigned int pennyValue = 1;
+    const unsigned int nickelValue = 5;
+    const unsigned int dimeValue = 10;
+    const unsigned int quarterValue = 25;
+    const unsigned int dollarValue = 100;
 
-    cout << "첫번째 숫자 입력: ";
-    cin >> num1;
-    const double PI = 3.1415;
+    unsigned int pennies;
+    unsigned int nickels;
+    unsigned int dimes;
+    unsigned int quarters;
+    unsigned int dollars;
 
-    sum = num1 + PI;
+    unsigned long totalValue;
 
-    cout << "두 숫자의 합: " << sum;
-    
+    cout << "페니의 수: ";
+    cin >> pennies;
+    cout << "니켈의 수: ";
+    cin >> nickels;
+    cout << "다임의 수: ";
+    cin >> dimes;
+    cout << "쿼터의 수: ";
+    cin >> quarters;
+    cout << "달러의 수";
+    cin >> dollars;
+
+    totalValue = pennies * pennyValue + nickels * nickelValue + dimes * dimeValue + quarters * quarterValue + dollars * dollarValue;
+    cout << "전체 값은" << totalValue << "페니입니다.";
     return 0;
-
 }
