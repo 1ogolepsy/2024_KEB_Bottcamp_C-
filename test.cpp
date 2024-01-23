@@ -4,15 +4,13 @@ using namespace std;
 int main()
 {
     int num1;
-    int num2;
-    int sum;
+    double sum;
 
     cout << "첫번째 숫자 입력: ";
     cin >> num1;
-    cout << "두번째 숫자 입력: ";
-    cin >> num2;
+    const double PI = 3.1415;
 
-    sum = num1 + num2;
+    sum = num1 + PI;
 
     cout << "두 숫자의 합: " << sum;
     
