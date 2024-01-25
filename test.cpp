@@ -1,10 +1,11 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
-    bool IsTrue = "0";
-    
-    cout << IsTrue;
+    char test = 'a';
+    cout << static_cast<bool>(test);
+
     return 0;
 }
