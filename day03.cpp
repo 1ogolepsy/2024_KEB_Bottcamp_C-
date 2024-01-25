@@ -1,47 +1,44 @@
 #include <iostream>
+#include <cmath>
 #include <iomanip>
 using namespace std;
 
 
 int main()
 {
-    int startDay = 0, daysInMonth = 0, col = 1;
-    do
-    {
-        cout << "한 달의 날짜 수를 입력하세요(ex. 28, 29, 30, 31: ";
-        cin >> daysInMonth;
-    } while (daysInMonth < 28 || daysInMonth > 31);
+    // //6-3
+    // const double PI = 3.14159265389793238462;
+    // double degree = PI / 4;
+
+    // cout << "sin(45): " << sin(degree) << endl;
+    // cout << "cos(45): " << cos(degree) << endl;
+    // cout << "tan(45): " << tan(degree) << endl;
+
+    //6-4
+    const double PI = 3.14159265389793238462;
+    int n =0;
+    double s, peri, area;
 
     do
     {
-        cout << "첫 날의 요일을 입력하세요(0~6): ";
-        cin >> startDay;
-    } while (startDay < 0 || startDay > 6);
+        cout << "변의 개수를 입력하세요(4이상의 정수): ";
+        cin >> n;
+    } while (n < 4);
 
-
-    cout << endl;
-    cout << "Sun Mon Tue Wed Thr Fri Sat " << endl;
-    cout << "--- --- --- --- --- --- ---" << endl;
-
-    for (int space = 0; space < startDay; space++)
+    do
     {
-        cout << "    ";
-        col++;
-    }
+        cout << "변의 길이를 입력하세요: ";
+        cin >> s;
+    } while (s < 0.0);
+
+    peri = n * s;
+    area = (n * pow(s,2)) / (n * tan(PI / n));
+
+    cout << "둘레: " << peri << endl;
+    cout << "넓이: " << area << endl;
+
     
     
-    // col = startDay + 1;
-
-    for(int day = 1; day <= daysInMonth; day++)
-    {
-        cout << setw(3) << day << " ";
-        col++;
-        if(col > 7)
-        {
-            cout << endl;
-            col = 1;
-        }
-    }
     return 0;
     
 }
