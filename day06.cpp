@@ -40,7 +40,7 @@ int main()
         }
     }
     
-    cout << "(x+y)^" << n << "의 이항계수: ";
+    cout << "(x + y)^" << n << "의 이항계수: ";
     for(int j = 0; j <= n; j++)
     {
         cout << setw(5) << pascal[n][j];

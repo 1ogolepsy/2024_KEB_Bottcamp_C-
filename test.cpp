@@ -4,13 +4,12 @@ using namespace std;
 
 int main()
 {
-    int array[50] = {1,1,2,1,1,1,1,1,1,1};
-    int size = 10;
-    for(int i = 3; i < size; i++)
-    {
-        array[i-1] = array[i];
-    }
-    size--;
-    cout << array[9];
+    int x =10;
+    double y = 13.5;
+    char c = 'a';
+    void* p = &x;
+
+    cout << *(int*)p;
+
     return 0;
 }

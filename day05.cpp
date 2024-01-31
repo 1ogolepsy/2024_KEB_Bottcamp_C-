@@ -21,19 +21,15 @@ int main()
     int data = 0;
     int size = 0;
     
-    cout << data;
     while(integerFile.eof())
     {
         integerFile >> data;
-        cout << "inside" << data;
-        cout << typeid(data).name();
         if(data >= 0 && data <= 9)
         {
             size++;
             frequencies[data]++;
         }
     }
-    cout << data;
     integerFile.close();
 
     cout << "파일 안에 " << size << "개의 유효한 데이터가 있습니다. " << endl;
